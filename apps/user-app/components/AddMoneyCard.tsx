@@ -5,8 +5,6 @@ import { Card } from "@repo/ui/card";
 import { Select } from "@repo/ui/Select";
 import { useState } from "react";
 import { TextInput } from "@repo/ui/TextInput";
-import { getServerSession } from "next-auth";
-import { authOptions } from "../app/lib/auth";
 import { CreateOnRampTransaction } from "../app/lib/actions/CreateOnRampTeansaction";
 
 const SUPPORTED_BANKS = [{
