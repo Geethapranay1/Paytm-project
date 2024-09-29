@@ -9,6 +9,8 @@
     "db:generate": "cd packages/db && npx prisma generate & cd ../.."
   },
   "devDependencies": {
+    "@repo/eslint-config": "*",
+    "@repo/typescript-config": "*",
     "@types/bcrypt": "^5.0.2",
     "prettier": "^3.2.5",
     "turbo": "^2.1.2",
