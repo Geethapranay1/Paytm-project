@@ -43,4 +43,4 @@ jobs:
           sudo docker pull geethapranay/paytm-app:latest
           sudo docker stop paytm-app || true
           sudo docker rm paytm-app || true
-          sudo docker run -d --name paytm-app -p 3005:3000 geethapranay/paytm-app:latest
+          sudo docker run -d --name paytm-app -p 3005:80 geethapranay/paytm-app:latest
