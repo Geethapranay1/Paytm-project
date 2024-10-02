@@ -29,14 +29,14 @@ jobs:
     - name: Verify Pushed Image
       run: docker pull geethapranay/paytm-app:latest  # Replace with your Docker Hub username and repository
     
-    - name: Deploy to EC2
-      uses: appleboy/ssh-action@master
-      with:
-        host: ${{ secrets.SSH_HOST }}
-        username: ${{ secrets.SSH_USERNAME }}
-        key: ${{ secrets.SSH_KEY }}
-        script: |
-          sudo docker pull geethapranay/paytm-app:latest
-          sudo docker stop web-app || true
-          sudo docker rm web-app || true
-          sudo docker run -d --name paytm-app -p 3005:80 geethapranay/paytm-app:latest
+    # - name: Deploy to EC2
+    #   uses: appleboy/ssh-action@master
+    #   with:
+    #     host: ${{ secrets.SSH_HOST }}
+    #     username: ${{ secrets.SSH_USERNAME }}
+    #     key: ${{ secrets.SSH_KEY }}
+    #     script: |
+    #       sudo docker pull geethapranay/paytm-app:latest
+    #       sudo docker stop web-app || true
+    #       sudo docker rm web-app || true
+    #       sudo docker run -d --name paytm-app -p 3005:80 geethapranay/paytm-app:latest
